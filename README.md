@@ -1,5 +1,7 @@
 ### **Directory Structure**
-To support a new platform, can introduce a `platform` directory within `mu_time/src/` to house platform-specific implementations:
+To support a new platform, add `src/platform/mu_time_<platform>.c`, 
+add `src/platform/mu_time_<platform>.h` and `test/test_mu_time_<platform>.c` as
+shown below:
 
 ```
 mu_time/
