@@ -20,7 +20,7 @@ BIN_DIR   := $(BUILD_DIR)/bin
 CC      := gcc
 CFLAGS  := -Wall -Wextra -Werror -O0 -g --coverage \
 		   -I.. \
-		   -I../src \
+		   -I../inc \
 		   -I../src/platform
 LDFLAGS := --coverage
 

@@ -25,7 +25,7 @@
 // *****************************************************************************
 // Includes
 
-#include "../src/mu_time.h"
+#include "mu_time.h"
 #include "unity.h"
 #include <stdio.h>
 

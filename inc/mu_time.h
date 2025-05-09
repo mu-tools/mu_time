@@ -46,7 +46,18 @@ extern "C" {
 // *****************************************************************************
 // Includes
 
-#include "mu_time_impl.h"  // define mu_time_abs_t and mu_time_rel_t
+// Define platform-specific data types for mu_time_abs_t and mu_time_rel_t
+// Add variants here as needed.
+#if defined(__linux__) || defined(__APPLE__)
+    #include "platform/mu_time_posix.h"
+#elif defined(_WIN32)
+    #include "platform/mu_time_windows.h"
+#elif defined(ESP32)
+    #include "platform/mu_time_esp32.h"
+#else
+    #error "Unsupported platform! Define your mu_time implementation."
+#endif
+
 #include <stdbool.h>
 #include <stdint.h>
 
