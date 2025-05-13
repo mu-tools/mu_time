@@ -37,13 +37,6 @@
 #define _MU_TIME_H_
 
 // *****************************************************************************
-// C++ Compatibility
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-// *****************************************************************************
 // Includes
 
 // Define platform-specific data types for mu_time_abs_t and mu_time_rel_t
@@ -60,6 +53,13 @@ extern "C" {
 
 #include <stdbool.h>
 #include <stdint.h>
+
+// *****************************************************************************
+// C++ Compatibility
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 // *****************************************************************************
 // Public API Functions

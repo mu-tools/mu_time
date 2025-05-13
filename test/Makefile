@@ -46,7 +46,7 @@ all: test
 # -------------------------------------------------------------------
 # Build & run
 # -------------------------------------------------------------------
-test: | clean $(TEST_EXE)
+tests: | clean $(TEST_EXE)
 	@echo ">>> Running unit tests for $(PLATFORM)…"
 	@./$(TEST_EXE)
 
