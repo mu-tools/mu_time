@@ -47,6 +47,8 @@
     #include "platform/mu_time_windows.h"
 #elif defined(ESP32)
     #include "platform/mu_time_esp32.h"
+#elif defined(__SAMD21J18A__)
+    #include "platform/mu_time_samd21.h"
 #else
     #error "Unsupported platform! Define your mu_time implementation."
 #endif
@@ -63,6 +65,11 @@ extern "C" {
 
 // *****************************************************************************
 // Public API Functions
+
+/**
+ * @brief Perform any platform-specific initialization for the time module.
+ */
+void mu_time_init(void);
 
 /**
  * @brief Returns the current absolute time from the platform-specific

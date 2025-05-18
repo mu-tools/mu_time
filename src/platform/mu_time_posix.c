@@ -33,6 +33,10 @@
 // *****************************************************************************
 // Public code
 
+void mu_time_init(void) {
+    // no initialization required. 
+}
+
 mu_time_abs_t mu_time_now(void) {
     struct timespec ts;
     clock_gettime(CLOCK_REALTIME, &ts);
