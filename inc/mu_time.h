@@ -124,32 +124,28 @@ bool mu_time_is_after(mu_time_abs_t a, mu_time_abs_t b);
  * @param delta_t Time duration in floating-point format.
  * @return Relative time value.
  */
-mu_time_rel_t mu_time_rel_from_seconds(float delta_t);
+mu_time_rel_t mu_time_rel_from_seconds(float seconds);
 
 /**
  * @brief Converts a relative time representation into floating-point format.
  * @param delta_t Relative time value.
  * @return Time duration as a floating-point value.
  */
-float mu_time_rel_to_seconds(mu_time_rel_t delta_t);
-
-/**
- * @brief Comparison helpers for absolute timestamps.
- */
+float mu_time_rel_to_seconds(mu_time_rel_t tics);
 
 /**
  * @brief Converts milliseconds into a relative time representation.
  * @param milliseconds Time duration in milliseconds.
  * @return Relative time value.
  */
-mu_time_rel_t mu_time_rel_from_millis(uint32_t milliseconds);
+mu_time_rel_t mu_time_rel_from_millis(int32_t milliseconds);
 
 /**
  * @brief Converts a relative time representation into milliseconds.
  * @param delta_t Relative time value.
  * @return Time duration in milliseconds.
  */
-uint32_t mu_time_rel_to_millis(mu_time_rel_t delta_t);
+int32_t mu_time_rel_to_millis(mu_time_rel_t tics);
 
 // *****************************************************************************
 // End of file
